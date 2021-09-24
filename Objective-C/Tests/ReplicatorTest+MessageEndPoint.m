@@ -411,7 +411,7 @@
     [self runP2PErrorScenario: kCBLMockConnectionReceive withRecoverability: NO];
 }
 
-- (void)testMEP2PPassiveClose {
+- (void) _testMEP2PPassiveClose {
     CBLMessageEndpointListenerConfiguration* config =
         [[CBLMessageEndpointListenerConfiguration alloc] initWithDatabase: self.otherDB
                                                              protocolType: kCBLProtocolTypeMessageStream];
@@ -519,7 +519,7 @@
     AssertNotNil(replicator2.status.error);
 }
 
-- (void)testMEP2PChangeListener {
+- (void)_testMEP2PChangeListener {
     NSMutableArray* statuses = [NSMutableArray array];
     CBLMessageEndpointListener* listener =
         [[CBLMessageEndpointListener alloc] initWithConfig:
@@ -549,7 +549,7 @@
     Assert(statuses.count > 0);
 }
 
-- (void)testMEP2PRemoveChangeListener {
+- (void) _testMEP2PRemoveChangeListener {
     NSMutableArray* statuses = [NSMutableArray array];
     CBLMessageEndpointListener* listener = [[CBLMessageEndpointListener alloc] initWithConfig:
         [[CBLMessageEndpointListenerConfiguration alloc] initWithDatabase: self.otherDB

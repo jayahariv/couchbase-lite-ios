@@ -191,7 +191,7 @@
     AssertEqual([[rs allObjects] count], 0u);
 }
 
-- (void) testExpiryLessThanDate {
+- (void) _testExpiryLessThanDate {
     NSError* error;
     CBLMutableDocument* doc = [[CBLMutableDocument alloc] init];
     NSString* docID = doc.id;
@@ -242,7 +242,7 @@
     AssertEqual([[rs allObjects] count], 0u);
 }
 
-- (void) testExpiryGreaterThanDate {
+- (void) _testExpiryGreaterThanDate {
     NSError* error;
     CBLMutableDocument* doc = [[CBLMutableDocument alloc] init];
     NSString* docID = doc.id;

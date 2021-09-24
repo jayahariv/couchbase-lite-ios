@@ -357,7 +357,7 @@
     [self.db removeChangeListenerWithToken: token];
 }
 
-- (void) testOverrideExpirationWithCloserDate {
+- (void) _testOverrideExpirationWithCloserDate {
     XCTestExpectation* expectation = [self expectationWithDescription: @"Document expiry test"];
     
     // Create doc
